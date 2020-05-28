@@ -1,2 +1,2 @@
 # CeleryEmails
-:zap: Just a simple django project to send emails using Celery
+:zap: Just a simple django project to send non-motivational emails using Celery
