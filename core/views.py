@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from core.tasks import to_sleep
+from core.tasks import send_emails
 
 # Create your views here.
 
 def index(request):
-    to_sleep.delay(10)
+    send_emails.delay()
     return HttpResponse("<h1>Done!</h1>")

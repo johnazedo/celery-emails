@@ -1,10 +1,13 @@
 from celery.decorators import task
-import time
+from django.core.mail import send_mail
 
-@task(name="sleep")
-def to_sleep(period: int):
-    for i in range(period):
-        time.sleep(1)
-        print(i)
-    
+@task(name="sendEmail")
+def send_emails():
+    send_mail(
+        'CeleryEmails',
+        'That worked very well',
+        'jplimao12@gmail.com',
+        ['selok19729@gilfun.com']
+    )
+
     return None
