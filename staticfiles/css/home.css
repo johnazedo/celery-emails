@@ -1,0 +1,32 @@
+body {
+    background-image: url('../images/nonsense.png');
+    align-items: center;
+    display: flex;
+    height: 100vh; }
+  
+  input {
+    width: 85% !important;
+    border-top-left-radius: 20px !important;
+    border-bottom-left-radius: 20px !important; 
+  }
+
+  input:focus { 
+    outline: none !important;
+    border-color: #dfd854 !important;
+    box-shadow: 0 0 10px #dfd854 !important;
+  }
+
+  button {
+    width: 100%;
+    background-color: #dfd854 !important;
+    border-color: #dfd854 !important;
+    color: dimgrey !important;
+    border-top-right-radius: 20px !important;
+    border-bottom-right-radius: 20px !important; }
+  
+  .row {
+    width: 100%;
+    height: 8vh; }
+  
+  .input-group-append {
+    width: 15% !important; }
