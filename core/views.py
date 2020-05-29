@@ -1,8 +1,6 @@
-from django.shortcuts import render
 from django.contrib.messages.views import SuccessMessageMixin
-from django.views.generic import TemplateView, CreateView
+from django.views.generic import CreateView
 from core.models import Email
-# from core.tasks import send_emails
 from django.urls import reverse_lazy
 
 # Create your views here.
