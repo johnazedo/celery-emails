@@ -132,6 +132,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "staticfiles"),
 ]
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
 CELERY_BROKER_URL = 'redis://localhost:6379'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379'

@@ -16,7 +16,7 @@ body {
     box-shadow: 0 0 10px #dfd854 !important;
   }
 
-  button {
+  #btnSearch {
     width: 100%;
     background-color: #dfd854 !important;
     border-color: #dfd854 !important;
@@ -30,3 +30,7 @@ body {
   
   .input-group-append {
     width: 15% !important; }
+
+  #messageBox {
+    margin-top: 20px;
+  }
