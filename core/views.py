@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, CreateView
 from core.models import Email
-from core.tasks import send_emails
+# from core.tasks import send_emails
+from django.urls import reverse_lazy
 
 # Create your views here.
 
@@ -15,6 +16,7 @@ class Home(CreateView):
     template_name = 'home.html'
     model = Email
     fields = ['text']
+    success_url = reverse_lazy('core:home')
 
     def dispatch(self, *args, **kwargs):
         # send_emails.delay()
