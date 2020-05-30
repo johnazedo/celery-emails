@@ -6,6 +6,7 @@ python:
 # command to install dependencies
 install:
   - pip install -r requirements.txt
+  - pip install django-celery-beat
 
 before_install:
   - pip install --upgrade pip
@@ -18,3 +19,4 @@ script:
   - python manage.py test
 
 fail_fast: true
+  
