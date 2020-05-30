@@ -13,7 +13,7 @@ class Message(models.Model):
 
 
 class Email(models.Model):
-    text = models.EmailField()
+    text = models.EmailField(unique=True)
 
     class Meta:
         verbose_name = 'Email'
