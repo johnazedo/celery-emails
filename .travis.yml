@@ -7,9 +7,14 @@ python:
 install:
   - pip install -r requirements.txt
 
+before_install:
+  - pip install --upgrade pip
+
 env:
   - DJANGO_VERSION=3.0.8
 
 # command to run tests
 script:
   - python manage.py test
+
+fail_fast: true
