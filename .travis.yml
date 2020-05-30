@@ -16,3 +16,5 @@ env:
 # command to run tests
 script:
   - python manage.py test
+
+fail_fast: true
