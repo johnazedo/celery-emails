@@ -6,4 +6,4 @@
   <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen.svg">
 </a>
 
-:zap: Just a simple django project to send non-motivational emails using Celery
+Just a simple django project to send non-motivational emails using Celery
