@@ -38,5 +38,6 @@ class HomePageTests(TestCase):
 
         try:
             email = Email.objects.get(id=2)
+            self.assertTrue(False)
         except Email.DoesNotExist as err:
             self.assertTrue(True)
