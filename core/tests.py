@@ -21,13 +21,15 @@ class HomePageTests(TestCase):
         self.assertTemplateUsed(response, self.template)
     
     def test_home_add_email(self):
+        email = 'email.example@gmail.com'
+
         response = self.client.post(self.url, {
-            'text':'email.example@gmail.com'
+            'text': email
         })
 
         email = Email.objects.get(id=1)        
         self.assertEquals(response.status_code, 302)
-        self.assertEquals(email.text, 'email.example@gmail.com')
+        self.assertEquals(email.text, email)
 
         
 
