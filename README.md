@@ -7,3 +7,28 @@
 </a>
 
 Just a simple django project to send non-motivational emails using Celery
+
+# Setup
+
+Clone this repository
+
+````sh
+$ git clone git@github.com:JohnAzedo/CeleryEmails.git
+````
+
+Install requirements
+
+````sh
+$ pip install -r requirements.txt
+````
+
+Make migrations and send to database
+````sh
+$ python manage makemigrations
+$ python manage migrate
+`````
+Run project
+
+````sh
+$ python manage runserver
+````
