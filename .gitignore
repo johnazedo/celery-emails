@@ -1,12 +1,11 @@
 # Personal
 chromedriver
+.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
-chromedriver
 
 # C extensions
 *.so
