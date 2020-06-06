@@ -8,7 +8,7 @@
 
 Just a simple django project to send non-motivational emails using Celery
 
-# What I learn?
+# What I learned?
 
 List of all the technologies I learned from building this project.
 
