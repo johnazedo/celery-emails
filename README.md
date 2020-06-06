@@ -20,6 +20,8 @@ List of all the technologies I learned from building this project.
 
 - Include Travis in a github repository;
 
+- Config and use a mail server.
+
 # Setup
 
 Clone this repository
@@ -31,7 +33,7 @@ $ git clone git@github.com:JohnAzedo/CeleryEmails.git
 ### Run with Docker :whale:
 
 ````sh
-docker-compose up
+$ docker-compose up
 ````
 
 ### Run on local env
