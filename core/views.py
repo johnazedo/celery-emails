@@ -3,7 +3,7 @@ from django.views.generic import CreateView
 from core.models import Email
 from django.urls import reverse_lazy
 
-from core.tasks import example
+from core.tasks import create_email
 
 # Create your views here.
 class Home(SuccessMessageMixin,CreateView):
@@ -15,5 +15,6 @@ class Home(SuccessMessageMixin,CreateView):
 
     def dispatch(self, *args, **kwargs):
         # send_emails.delay()
-        example.delay()
+        # example.delay()
+        create_email.delay()
         return super(Home, self).dispatch(*args, **kwargs)
