@@ -16,5 +16,5 @@ class Home(SuccessMessageMixin,CreateView):
     def dispatch(self, *args, **kwargs):
         # send_emails.delay()
         # example.delay()
-        create_email.delay()
+        # create_email.delay()
         return super(Home, self).dispatch(*args, **kwargs)
