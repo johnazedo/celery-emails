@@ -25,7 +25,7 @@ SECRET_KEY = '-80a(!k&2ntr$)z6v-5)^v*oi^xkwlvyi$)@6-&p5u9*k347co'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -134,8 +134,8 @@ STATICFILES_DIRS = [
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
-CELERY_BROKER_URL = 'redis://localhost:6379'
-CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+CELERY_BROKER_URL = 'redis://0.0.0.0:6379'
+CELERY_RESULT_BACKEND = 'redis://0.0.0.0:6379'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
