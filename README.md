@@ -8,7 +8,7 @@
 
 Just a simple django project to send non-motivational emails using Celery
 
-# What I learn?
+# What I learned?
 
 List of all the technologies I learned from building this project.
 
@@ -19,6 +19,8 @@ List of all the technologies I learned from building this project.
 - Use Django Messages Framework;
 
 - Include Travis in a github repository;
+
+- Config and use a mail server.
 
 # Setup
 
@@ -31,7 +33,7 @@ $ git clone git@github.com:JohnAzedo/CeleryEmails.git
 ### Run with Docker :whale:
 
 ````sh
-docker-compose up
+$ docker-compose up
 ````
 
 ### Run on local env
