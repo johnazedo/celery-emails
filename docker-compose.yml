@@ -15,6 +15,15 @@ services:
       - "8000:8000"
     depends_on: 
       - redis
+  
+  # celery:
+  #   build: .
+  #   command: celery -A celeryEmails worker -l info
+  #   container_name: celeryLogs
+  #   volumes:
+  #     - .:/code
+  #   depends_on: 
+  #     - redis 
 
 # Run this command after docker-compose up:
-# docker exec -it server celery -A celeryEmails worker -l info
+# docker exec server celery -A celeryEmails worker -l info

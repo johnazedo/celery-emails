@@ -1,21 +1,12 @@
 language: python
 
-python:
-  - "3.8"
-
-# command to install dependencies
-install:
-  - pip install -r requirements.txt
+services:
+  - docker
 
 before_install:
-  - pip install --upgrade pip
+  - docker-compose up --detach
 
-env:
-  - DJANGO_VERSION=3.0.7
-
-# command to run tests
 script:
-  - python manage.py test
-
-fail_fast: true
-  
+  - docker exec -d server celery -A celeryEmails worker -l info
+  - docker exec server python manage.py test
+  - docker stop server redis
