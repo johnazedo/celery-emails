@@ -4,7 +4,7 @@ services:
   - docker
 
 install:
-  - docker-compose up
+  - docker-compose up --build
 
 script:
   - docker exec -it server python manage.py test
