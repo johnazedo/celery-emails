@@ -3,7 +3,7 @@ language: python
 services:
   - docker
 
-install:
+before_install:
   - docker-compose up --build
 
 script:
