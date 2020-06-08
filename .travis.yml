@@ -1,21 +1,10 @@
 language: python
 
-python:
-  - "3.8"
+services:
+  - docker
 
-# command to install dependencies
 install:
-  - pip install -r requirements.txt
+  - docker-compose up
 
-before_install:
-  - pip install --upgrade pip
-
-env:
-  - DJANGO_VERSION=3.0.7
-
-# command to run tests
 script:
-  - python manage.py test
-
-fail_fast: true
-  
+  - docker exec -it server python manage.py test

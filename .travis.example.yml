@@ -1,0 +1,22 @@
+# To run in a env python without docker
+
+language: python
+
+python:
+  - "3.8"
+
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+
+before_install:
+  - pip install --upgrade pip
+
+env:
+  - DJANGO_VERSION=3.0.7
+
+# command to run tests
+script:
+  - python manage.py test
+
+fail_fast: true
