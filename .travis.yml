@@ -7,5 +7,6 @@ before_install:
   - docker-compose up --detach
 
 script:
-  - docker exec server celery -A celeryEmails worker -l info
+  - docker exec -d server celery -A celeryEmails worker -l info
   - docker exec server python manage.py test
+  - docker stop server redis
