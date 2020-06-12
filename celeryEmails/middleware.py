@@ -15,9 +15,11 @@ class AddEmailMiddleware:
             print(f'debug -> view_class is Home')
 
             # POST is being called here to create a new e-mail!
+            # post or form_valid function
             if request.method == 'POST':
                 print(f'debug -> request method is POST')
             
             # GET is being called here to send the Home Page of the site!
+            # Dispatch function
             if request.method == 'GET':
                 print(f'debug -> request method is GET')
