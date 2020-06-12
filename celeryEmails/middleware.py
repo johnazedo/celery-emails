@@ -1,18 +1,5 @@
-from django.conf import settings
-
-class HomeMiddleware:
-
-    def __init__(self, get_response):
-        self.get_response = get_response
-    
-    def __call__(self, request):
-        response = self.get_response(request)
-        return response
-    
-    # def process_view(self, request, view_func, view_args, view_kwargs):
-    #     to_string = f'HomeMiddleware -> \n View Function: {view_func}\n View args: {view_args}\n View kwargs: {view_kwargs}'
-        
-    #     print(to_string)
+from django.http.response import HttpResponse
+from core.views import Home
 
 class AddEmailMiddleware:
 
@@ -24,7 +11,13 @@ class AddEmailMiddleware:
         return response
     
     def process_view(self, request, view_func, view_args, view_kwargs):
-        # print(f'{dir(request)}')
-        print(request.POST['text'])
-        # to_string = f'AddEmailMiddleware -> \n View Function: {view_func}\n View args: {view_args}\n View kwargs: {view_kwargs}'
-        # print(to_string)
+        if view_func.view_class == Home:
+            print(f'debug -> view_class is Home')
+            # print(f'debug -> method: {request.method}')
+            # POST is being called here to create a new e-mail!
+            if request.method == 'POST':
+                print(f'debug -> request method is POST')
+            
+            # GET is being called here to send the Home Page of the site!
+            if request.method == 'GET':
+                print(f'debug -> request method is GET')
