@@ -52,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'celeryEmails.middleware.HomeMiddleware',
+    'celeryEmails.middleware.AddEmailMiddleware'
 ]
 
 ROOT_URLCONF = 'celeryEmails.urls'
