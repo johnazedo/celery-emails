@@ -22,7 +22,7 @@ List of all the technologies I learned from building this project.
 
 - Config and use a mail server;
 
-- Starting to study Slenium.
+- Starting to study Selenium.
 
 # Setup
 
