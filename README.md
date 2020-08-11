@@ -20,9 +20,7 @@ List of all the technologies I learned from building this project.
 
 - Include Travis in a github repository;
 
-- Config and use a mail server;
-
-- Starting to study Selenium.
+- Config and use a mail server.
 
 # Setup
 
