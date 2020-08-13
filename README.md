@@ -16,8 +16,6 @@ List of all the technologies I learned from building this project.
 
 - Do asynchronoues tasks using Celery;
 
-- Use Django Messages Framework;
-
 - Include Travis in a github repository;
 
 - Config and use a mail server;
